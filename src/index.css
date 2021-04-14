@@ -9,6 +9,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.App {
+    display: flex;
+}
+
 .component {
     border: 1px solid black;
     width: 300px;

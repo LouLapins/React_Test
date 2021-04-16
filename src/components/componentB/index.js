@@ -1,10 +1,14 @@
+
 import React, { Component } from 'react'
+
 
 export default class ComponentB extends Component {
     constructor(props) {
         super(props);
-        this.state = { color: "green"}
+        this.state = { color: "green",
+                        value: ""}
         this.changeColor = this.changeColor.bind(this);
+        
     }
 
    componentDidMount() {
@@ -18,7 +22,7 @@ export default class ComponentB extends Component {
 
    changeColor() {
     this.setState((prevState) => {
-     if (prevState.color === "green") {
+     if (prevState.color !== "pink") {
          return { color: "pink" };
      } else {
          return { color: "green" };
@@ -29,8 +33,8 @@ export default class ComponentB extends Component {
     render() {
         return (
             <div className={"component"} id={this.state.color}>
-                <span className={"component_title"}> Component B </span>
-                <button className={"color_btn"} onClick={this.changeColor}>Change color</button>
+                <span className={"component_title"} id={"b"}> B </span>
+                <button className={"color_btn"} onClick={this.changeColor}>Color</button>
             </div>
         )
     }

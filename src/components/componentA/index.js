@@ -13,10 +13,14 @@ export default class ComponentA extends Component {
    componentDidMount() {
         const color = localStorage.getItem("colorA");
         this.setState({ color: color });
+
+        const value = localStorage.getItem("value");
+        this.setState({ value: value });
    }
 
    componentDidUpdate() {
         localStorage.setItem("colorA", this.state.color);
+        localStorage.setItem("value", this.state.value);
    }
 
    changeColor() {

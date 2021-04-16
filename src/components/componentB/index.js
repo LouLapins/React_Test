@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 
 
@@ -39,3 +38,4 @@ export default class ComponentB extends Component {
         )
     }
 }
+
